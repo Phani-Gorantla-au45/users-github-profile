@@ -8,8 +8,13 @@
   @media screen and (max-width: 750px) {
     .flex-container {
       flex-direction: column-reverse;
+      margin: auto;
+      
     }
+   
+    
   }
+
 
   .flex-container > div {
     background-color: white;
