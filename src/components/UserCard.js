@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
+import UserRepos from '../Pages/UserRepos';
 
 function UserCard(props) {
+  const [showRepo, setShowRepo] = useState(false)
+
+  function userProfile(){
+    setShowRepo(true);
+  }
+
+  function fetchUserRepo(){
+    console.log(props.user.avatar_url)
+  }
   return (
     <div>
-        <img src={props.user.avatar_url}></img>
-        <h3>{props.user.login}</h3>
-        <a href={props.user.html_url}>GitHub Profile</a>
+       
+          <Link to={`/repo/${props.user.login}`}>
+          <img src={props.user.avatar_url}>
+          </img> 
+          </Link>
+          
+       
     </div>
   )
 }

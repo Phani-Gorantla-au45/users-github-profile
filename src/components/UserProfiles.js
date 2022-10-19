@@ -5,7 +5,7 @@ function UserProfiles(props) {
   return (
     <div>
         {props.data.map(item =>
-            <UserCard user={item} />
+            <UserCard key={item.id} user={item} />
             )}
     </div>
     
