@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { Route, Switch } from 'react-router-dom'
 import './App.css';
 import FetchApi from './components/FetchApi';
